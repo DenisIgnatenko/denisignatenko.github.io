@@ -1,1 +1,162 @@
-hello
+<!doctype html>
+<html lang="ru">
+	<head>
+		<title>Denis Ignatenko - senior fullstack developer</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="styles/style.css" rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<nav>
+			<div class="navigation-bar">
+				<a href="#">
+					<span class="logo">D</span>
+					Денис Игнатенко
+				</a>
+				<!-- <div class="nav-menu-button"> -->
+				<!-- 	<i class="ri-menu-5-fill"></i> -->
+				<!-- </div> -->
+			</div>
+			<div>
+				<ul class="nav-items" id="nav-links">
+					<li>
+						<a href="#about">Обо мне</a>
+					</li>
+					<li>
+						<a href="#home">Портфолио</a>
+					</li>
+					<li>
+						<a href="#contact" class="button button-large">Написать</a>
+					</li>
+				</ul>
+				<!-- <a href="#contact" class="button">Связаться</a> -->
+			</div>
+		</nav>
+		<header class="section-container header-container" id="home">
+			<div class="main-image">
+				<img src="img/main.jpg" alt="Denis Ignatenko" />
+			</div>
+			<div class="header-content">
+				<div>
+					<h1>
+						Денис.
+						<br />
+						Никакой программист
+						<br />
+						для ваших проектов.
+					</h1>
+				</div>
+				<p class="section-description">
+					Практически ничего не умею, но могу делать очень умный вид, браться за
+					самые сложные задачи, ставить приемлемые сроки исполнения, отвечать за
+					множество сложных проектов одновременно и поддерживать коллег в их
+					нелегкой работе!
+				</p>
+				<div class="main-button">
+					<button class="button">Нанять меня сейчас</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="about">
+				<div class="container">
+					<div class="row">
+						<div class="about-col-one">
+							<img src="img/about.jpg" />
+						</div>
+						<div class="about-col-two">
+							<h1>Обо мне</h1>
+							<p>
+								У меня огромный опыт разработки самых сложных и
+								высоконагруженных систем, стаж более 10 дней. Владею всем
+								спектров возможных технологий, и массовых коммуникаций, которые
+								помогут вашему бизнесу расти и развиваться, а вашим соседям
+								радоваться каждому прожитому дню!
+							</p>
+							<div class="archievements">
+								<p class="links link-active" onclick="opentab('know')">знаю</p>
+								<p class="links" onclick="opentab('can')">умею</p>
+								<p class="links" onclick="opentab('do')">могу</p>
+							</div>
+							<div class="link-contents tab-active" id="know">
+								<ul>
+									<li>
+										<span>Английский</span>
+										<br />
+										Eсть сертификат IELTS 7.5
+									</li>
+									<li>
+										<span>Как жарить кофе</span>
+										<br />
+										Есть даже свое производство!
+									</li>
+									<li>
+										<span>Маршрут до буткемпа</span>
+										<br />
+										Без навигатора!
+									</li>
+								</ul>
+							</div>
+							<div class="link-contents" id="can">
+								<ul>
+									<li>
+										<span>Спать</span>
+										<br />
+										По 10 часов в сутки
+									</li>
+									<li>
+										<span>Водить машину</span>
+										<br />
+										На механике и автомате
+									</li>
+									<li>
+										<span>Варить яйцо-пашот</span>
+										<br />
+										с идеальным желтком
+									</li>
+								</ul>
+							</div>
+							<div class="link-contents" id="do">
+								<ul>
+									<li>
+										<span>Пройти 10000 шагов</span>
+										<br />
+										за день
+									</li>
+									<li>
+										<span>Вывести жену</span>
+										<br />
+										Из себя на целый день
+									</li>
+									<li>
+										<span>Заморочиться на одной задаче</span>
+										<br />
+										на кучу часов, которых у меня нет.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			var links = document.getElementsByClassName('links');
+			var contents = document.getElementsByClassName('link-contents');
+			function opentab(tabname) {
+				for (link of links) {
+					link.classList.remove('link-active');
+				}
+				for (content of contents) {
+					content.classList.remove('tab-active');
+				}
+				event.currentTarget.classList.add('link-active');
+				document.getElementById(tabname).classList.add('tab-active');
+			}
+		</script>
+	</body>
+</html>
